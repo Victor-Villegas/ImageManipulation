@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Manipulation</title>
+  <link rel="stylesheet" href="css/uikit.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="uk-container">
+    <div class="uk-grid">
+      <div class="uk-width-1-3 uk-flex-center uk-text-center">
+        <h1 class="uk-margin-large-bottom">Image Manipulation</h1>
+
+        <span id="spinner"><span class="icon" uk-icon="icon: cog"></span></span>
+
+        <p class="uk-margin-large-top">Please upload an image, select a filter and click the "process" button.</p>
+
+        <div class="test-upload" uk-form-custom>
+          <input type="file" type="file" accept="image/*" id="file-input">
+          <button class="uk-button uk-button-default" type="button" tabindex="-1">Select Image</button>
+        </div>
+
+        <div class="uk-margin">
+          <label class="uk-form-label" for="form-stacked-select">Select a filter</label>
+          <div class="uk-form-controls">
+            <select class="uk-select" id="form-stacked-select">
+              <option value="0">Add Red</option>
+              <option value="1">Add Green</option>
+              <option value="2">Add Blue</option>
+              <option value="3">Contrast</option>
+              <option value="4">Birghtness</option>
+              <option value="5">B&W</option>
+            </select>
+          </div>
+        </div>
+
+        <button onclick="processImage()" class="uk-button uk-button-primary">Process</button>
+      </div>
+
+      <div class="uk-width-2-3">
+        <canvas id="canvas"></canvas>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="js/uikit.min.js"></script>
+<script src="js/uikit-icons.min.js"></script>
+<script src="js/script.js"></script>
+
+</html>
